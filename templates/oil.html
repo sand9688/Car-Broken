@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>소모품</title>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='oil_16.css', q=2)}}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body style="background-color: #fff8dc;">
+       <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/"
+                style="position:sticky; margin-left:15px; margin-right:50px; margin-top:0px;">
+                <img src="{{url_for('static', filename='home.png')}}" alt="" width="30" height="24"
+                  class="d-inline-block align-text-top">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page"
+                      href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/function">AI 진단</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/center_list">정비소</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/oil">소모품</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+            <div class="title_space">
+               <h1>소모품 교환하기</h1>
+                <p>소모품(엔진오일, 타이어)을 합리적 가격에 교환하기</p>
+            </div>
+            <div id="body-wrapper" >
+                <div id="body-content">
+                    <div class="link_space">
+                        <p>타이어 최저가부터 검색까지</p>
+                        <div class="centerer">
+                            <a class="btn-0" href="https://www.tire-fit.com/">타이어핏</a>
+                        </div>
+                        <p>엔진오일 최저가부터 예약까지</p>
+                        <div class="centerer">
+                            <a class="btn-0" href="https://www.gongim.com/main/main.php">공임나라</a>
+                        </div>
+                    </div>
+
+
+                <div class="text_space1">
+                    <h2>자동차 소모품의 교환주기</h2>
+                    아래의 교환주기는 일반적 경우이며 운전습관이나 주행환경에 따라 달라질수 있습니다
+                    <div style="margin-top: 40px;">
+                    <img src="https://cdn.pixabay.com/photo/2021/11/27/14/48/oil-change-6828224_960_720.jpg" alt="My Image" height="400">
+                    </div>
+                    <h3>>엔진오일<</h3>
+                            <br>엔진오일의 교환주기는 통상적으로 합성유는 10,000km ~ 15,000km, 광유는 7,000 ~ 10,000km의 교환주기를 가집니다.</br>
+                            <br>그러나 다음과 같은 가혹환경에서 주행시 보통의 교환주기보다 1/2 정도 단축됩니다</br>
+
+                    <div align="left" style="margin-left: 30%; margin-top:30px" >
+
+                            <br> > 짧은 거리를 반복적으로 주행했을 때</br>
+                            <br> > 모래, 먼지가 많은 지역을 많이 주행했을 때</br>
+                            <br> > 공회전을 과다하게 계속 시켰을 때</br>
+                            <br> > 교통체증이 심한 지역을 정지와 출발의 잦은 반복주행심한구역 주행</br>
+                            <br> > 험로(모랫길, 자갈길, 눈길, 비포장도로) 지역을 많이 주행했을 때</br>
+                            <br> > 산길, 오르막길, 내리막길 주행빈도가 높은 경우</br>
+                            <br> > 택시, 상용차, 견인차로 사용되는 경우</br>
+                            <br> > 고속 주행(170km/h)의 빈도가 높거나 급가속이나 급감속 주행</br>
+                            <br> > 부식물질 위 또는 한랭지역 주행</br>
+                            <br> > 캠핑용으로 사용 또는 지붕 위 짐칸 위에 짐 탑재주행</br>
+                    </div>
+                </div>
+                <div class="text_space2">
+                    <div style="margin-top:40px; height: 1200px;">
+
+                    <img src="https://cdn.pixabay.com/photo/2014/04/25/21/10/nascar-332136_960_720.jpg" alt="My Image" height="400">
+                    <div style="margin-top: 40px; margin-bottom: 40px">
+                        <h2>>타이어<</h2>
+                    </div>
+                        <div>
+                            <a>
+                            <br>타이어의 교환주기는 위의 사진에서 보이는 마모한계선을 통해서 알 수가 있습니다.</br>
+                            <br>타이어가 마모되면서 마모한계선이 타이어 트레드와 평면을 이루면 타이어를 교체할 시기입니다.</br>
+                            <br>또는 다음과 같은 현상이 일어날 시 타이어를 교환해야 합니다</br>
+                        <div align="left" style="margin-left: 30%;" >
+                            <br>> 타이어 측면이 비정상적으로부풀어 올랐을 때</br>
+                            <br>> 운전 시 지속적으로 진동이 발생하는 경우</br>
+                            <br>> 타이어 전반에걸쳐 균열이 관찰 되었을 경우</br>
+
+                        </div>
+                                <img src="https://mblogthumb-phinf.pstatic.net/MjAxODA2MDFfMTgw/MDAxNTI3ODI4NTUzNTAz.XfIWy9tdQcXKZG0OgvFGXoOrtTHMGnD4bVV1Ho96puIg.b1TLq3fGMQCeBhD2jfPj-7LSJ7IsBOK03CmD9gR6eEgg.JPEG.tirestory3/image_3107483261527827631680.jpg?type=w800"
+                            alt="My Image" height="300">
+                        <div style="margin-top: 60px;">
+
+                                <h3>>타이어 관리하기<</h3>
+                        </div>
+                        <div style="margin: auto;">
+                            <br>> 고르지 않은 타이어 마모나 예상보다 너무 빨리 마모될 경우, 서스펜션과 휠얼라인먼트 점검하기</br>
+                            <br>> 앞 타이어와 뒤 타이어 교환해주기</br>
+                            <br>> 적정공기압 유지하기</br>
+                            </a>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+    </body>
+ <footer class="footer" style="vertical-align: middle; padding:60px;">
+
+        <p>Copyright &copy; 2022 코딩행동(고경훈, 장건, 반재영, 김기홍, 박민관). All rights reserved.</p>
+        <p>프로젝트 기간</p>
+        <p>광주인공지능사관학교</p>
+    </footer>
+</html>

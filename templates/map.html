@@ -1,0 +1,56 @@
+{% extends "base.html"%}
+{% block style_head %}
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{{url_for('static', filename='car_list.css')}}"/>
+  <style>
+    .car_list{
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 100px;
+    width: 900px;
+    height: 800px;
+    overflow: auto;
+    }
+    .title{
+      position: absolute;
+      margin-top: 20px;
+      margin-left: 42%;
+    }
+    #index{
+      position: sticky;
+      top: 0px;
+    }
+    
+
+
+  </style>
+{% endblock %}
+{% block body %}
+<div class="title">
+  <h2> 광주 카센터 리스트 </h2>
+</div>
+<div class="car_list">
+  <table class="table" cellspacing="0" cellpadding="0">
+    <thead id="index">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col"> 공업사 이름 </th>
+        <th scope="col"> 주   소  </th>
+      </tr>
+    </thead>
+      <tbody>
+        {% for key, value in result.items() %}
+        <tr>
+            <form action="/map" method="POST" enctype="multipart/form-data">
+                <th scope="row">{{ key }}</th>
+            </form>
+                <td><a href="/map">{{ value[0] }}</a></td>
+                <td>{{ value[1] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+  <div>{{ x }}</div>
+</div>
+{% endblock %}

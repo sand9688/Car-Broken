@@ -1,0 +1,25 @@
+{% extends "base.html"%}
+{% block style_head %}
+
+{% endblock %}
+{% block body %}
+    <div id="class" style="margin: 76px;">
+        <div id="textbox" style="text-align: center;">
+            <h2>정 보 입 력</h2>
+        </div>
+        <ul>
+            <div class="mb-3">
+                <form action="/function" method="POST" enctype="multipart/form-data">
+                    <p><input class="form-control" id="floatingInput" placeholder="상세주소를 입력해 주세요" type="text" name="주소" / ></p>
+                    <div class="input-group">
+                        <input type="file" class="form-control" id="inputGroupFile04"
+                               aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="image"/>
+                    </div>
+                    <p style="margin-top: 10px; margin-left: 45%;">
+                        <input type="submit" value="저장"/>
+                    </p>
+                </form>
+        </ul>
+    </div>
+{% endblock %}
+        

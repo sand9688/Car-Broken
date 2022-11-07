@@ -1,0 +1,32 @@
+{% extends "base.html"%}
+{% block style_head %}
+<style>
+    .con{
+        display: inline;
+    }
+    .card{
+        justify-content: center;
+        margin-top: 30px;
+        margin-left: 35%;
+        border: 1px solid black;
+        border-radius: 0px 0px 20px 20px;
+        display: inline-block;
+    }
+    .map{
+        display: inline;
+    }
+    .outer,.inner {position:relative}
+    .absolute {position:absolute;bottom:0;right:0}
+</style>
+{% endblock %}
+{% block body %}
+<div class="con">
+<div class="card" style="width: 45rem;">
+    <img src="{{url_for('static', filename='result/'+fname)}}" class="card-img-top" alt="입력 받은 사진">
+    <div class="card-body">
+      <h5 class="card-title"> AI 측정 결과: [] </h5>
+      <p class="card-text">{{ result }}</p>
+      <a href="/near" class="btn btn-primary">근처 카센터 확인하기</a>
+    </div>
+
+{% endblock %}
